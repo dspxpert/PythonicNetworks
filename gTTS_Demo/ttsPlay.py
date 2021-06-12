@@ -1,14 +1,12 @@
-#!/usr/local/bin/python3
-# https://wikidocs.net/15213
-# https://wikidocs.net/15214
+#!/usr/bin/python3
 
 import vlc
 import time
 from gtts import gTTS
 from mutagen.mp3 import MP3
 
-def ttsPlay(message, lang='en', display=True, Speed=1):
-    ttsfile = 'ttsplay.mp3'
+def ttsPlay(message, lang='en', display=True, Speed=1.0):
+    ttsfile = 'last_tts.mp3'
     media_player = vlc.MediaPlayer()
 
     tts = gTTS(message, lang=lang)
@@ -27,5 +25,6 @@ def ttsPlay(message, lang='en', display=True, Speed=1):
 if __name__ == "__main__":
     #for i in range(0, 101, 20):
     #    ttsPlay(f'The Progress is {i}%')
-    ttsPlay(f'The test has completed. Thank you.')
+    #ttsPlay('The test has completed.')
+    ttsPlay('Thank you.')
     ttsPlay('감사합니다.', 'ko')
