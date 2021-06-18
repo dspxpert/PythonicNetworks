@@ -1,3 +1,3 @@
-## MediaPipe Demos
+# MediaPipe Demos
 
 pip install mediapipe
