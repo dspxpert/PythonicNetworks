@@ -9,3 +9,6 @@
 #### Main textbook
 
 ### "Automate The Boring Stuff with Python, 2nd Edition" by Al Sweigart
+
+
+#### pip install -r requirements.txt
