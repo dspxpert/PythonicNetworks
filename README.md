@@ -5,14 +5,19 @@
 
 
 
-
 #### Main textbook
 
 ### "Automate The Boring Stuff with Python, 2nd Edition" by Al Sweigart
 
 
-#### Download Online Material from no starch press
+
+
+Download Online Material from no starch press
+
 https://nostarch.com/download/Automate_the_Boring_Stuff_2e_onlinematerials.zip
 
 
-#### pip install -r requirements.txt
+
+Install Third-Party Modules
+
+pip install -r requirements.txt
