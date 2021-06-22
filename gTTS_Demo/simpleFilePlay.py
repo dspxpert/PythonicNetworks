@@ -6,3 +6,4 @@ with open(sys.argv[1]) as fp:
         if line.strip() == "":
             continue
         ttsPlay.ttsPlay(line.strip())
+        
