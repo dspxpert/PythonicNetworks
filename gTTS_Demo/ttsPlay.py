@@ -1,30 +1,19 @@
 #!/usr/bin/python3
-
-import vlc
-import time
 from gtts import gTTS
-from mutagen.mp3 import MP3
+from io import BytesIO
+from pydub import AudioSegment
+from pydub.playback import play
 
-def ttsPlay(message, lang='en', display=True, Speed=1.0):
-    ttsfile = 'last_tts.mp3'
-    media_player = vlc.MediaPlayer()
-
+def ttsPlay(message, lang='en', Display=True):
+    if Display==True:
+        print(message)
     tts = gTTS(message, lang=lang)
-    tts.save(ttsfile)
-
-    media_length = MP3(ttsfile).info.length + 0.1*Speed
-    if display==True:
-        print(f"{message} : {media_length:0.2f}sec.")
-
-    media = vlc.Media(ttsfile)
-    media_player.set_media(media)
-    media_player.set_rate(Speed)
-    media_player.play()
-    time.sleep(media_length/Speed)
+    fp = BytesIO()
+    tts.write_to_fp(fp)
+    fp.seek(0)
+    song = AudioSegment.from_file(fp, format="mp3")
+    play(song)
 
 if __name__ == "__main__":
-    #for i in range(0, 101, 20):
-    #    ttsPlay(f'The Progress is {i}%')
-    #ttsPlay('The test has completed.')
     ttsPlay('Thank you.')
     ttsPlay('감사합니다.', 'ko')
