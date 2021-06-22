@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+# pip install gTTS pydub
+# need ffmpeg and ffprobe, install ffmpeg from https://www.gyan.dev/ffmpeg/builds/
+
 from gtts import gTTS
 from io import BytesIO
 from pydub import AudioSegment
