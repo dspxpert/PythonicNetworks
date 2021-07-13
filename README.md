@@ -1,8 +1,7 @@
-# Pythonic Networks
+# Pythonic Networks - Python Study Group of HUMAX Networks, Inc.
 
 Repository of Pythonic Networks
 
-Python Study Group of HUMAX Networks, Inc.
 
 
 
