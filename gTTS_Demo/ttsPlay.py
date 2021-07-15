@@ -32,7 +32,7 @@ def filePlay(argv):
                 
 if __name__ == "__main__":
     if len(sys.argv) < 2:   # without argument, display usage and play demo
-        print('ttsPlay.py files_to_read')
+        print('ttsPlay.py [files_to_read]')
         ttsPlay('Thank you.')
         ttsPlay('감사합니다.')
     else:
