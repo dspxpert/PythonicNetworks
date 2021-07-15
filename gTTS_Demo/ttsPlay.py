@@ -24,13 +24,16 @@ def ttsPlay(message, lang='auto', display=True):
     song = AudioSegment.from_file(fp, format="mp3")
     play(song)
 
+def filePlay(argv):
+    for file in argv:
+        with open(file, "r") as fp:
+            for line in fp:
+                ttsPlay(line)
+                
 if __name__ == "__main__":
-    if len(sys.argv) < 2:   # no argument
+    if len(sys.argv) < 2:   # without argument, display usage and play demo
         print('ttsPlay.py files_to_read')
         ttsPlay('Thank you.')
         ttsPlay('감사합니다.')
     else:
-        for file in sys.argv[1:]:
-            with open(file, "r") as fp:
-                for line in fp:
-                    ttsPlay(line)
+        filePlay(sys.argv[1:])
