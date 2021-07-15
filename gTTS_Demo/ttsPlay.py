@@ -8,11 +8,11 @@ from pydub.playback import play
 from textblob import TextBlob
 import sys
 
-def ttsPlay(message, lang='auto', Display=True):
+def ttsPlay(message, lang='auto', display=True):
     message = message.strip()
     if message=='':
         return
-    if Display==True:
+    if display==True:
         print(message)
     if lang=='auto':
         lang = TextBlob(message).detect_language()
