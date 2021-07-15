@@ -1,16 +1,22 @@
 #!/usr/bin/python3
-
-# pip install gTTS pydub
+# pip install gTTS pydub textblob
 # need ffmpeg and ffprobe, install ffmpeg from https://www.gyan.dev/ffmpeg/builds/
-
 from gtts import gTTS
 from io import BytesIO
 from pydub import AudioSegment
 from pydub.playback import play
+from textblob import TextBlob
+import sys
 
-def ttsPlay(message, lang='en', Display=True):
+def ttsPlay(message, lang='auto', Display=True):
+    message = message.strip()
+    if message=='':
+        return
     if Display==True:
         print(message)
+    if lang=='auto':
+        lang = TextBlob(message).detect_language()
+
     tts = gTTS(message, lang=lang)
     fp = BytesIO()
     tts.write_to_fp(fp)
@@ -19,5 +25,12 @@ def ttsPlay(message, lang='en', Display=True):
     play(song)
 
 if __name__ == "__main__":
-    ttsPlay('Thank you.')
-    ttsPlay('감사합니다.', 'ko')
+    if len(sys.argv) < 2:   # no argument
+        print('ttsPlay.py files_to_read')
+        ttsPlay('Thank you.')
+        ttsPlay('감사합니다.')
+    else:
+        for file in sys.argv[1:]:
+            with open(file, "r") as fp:
+                for line in fp:
+                    ttsPlay(line)
