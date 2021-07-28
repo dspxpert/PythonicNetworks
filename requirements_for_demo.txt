@@ -1,0 +1,5 @@
+mediapipe
+gTTS
+pydub
+textblob
+pyzbar
