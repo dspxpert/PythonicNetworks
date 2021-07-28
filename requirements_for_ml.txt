@@ -1,0 +1,9 @@
+tensorflow_cpu
+scipy
+scikit-learn
+scikit-image
+pandas
+jupyter
+torch
+torchvision
+torchaudio
