@@ -3,3 +3,4 @@ gTTS
 pydub
 textblob
 pyzbar
+qrcode
