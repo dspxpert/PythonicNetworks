@@ -5,7 +5,8 @@ from gtts import gTTS
 from io import BytesIO
 from pydub import AudioSegment
 from pydub.playback import play
-from textblob import TextBlob
+#from textblob import TextBlob
+from langdetect import detect
 import sys
 
 def ttsPlay(message, lang='auto', display=True):
@@ -15,8 +16,8 @@ def ttsPlay(message, lang='auto', display=True):
     if display==True:
         print(message)
     if lang=='auto':
-        lang = TextBlob(message).detect_language()
-
+        #lang = TextBlob(message).detect_language()
+        lang = detect(message)
     tts = gTTS(message, lang=lang)
     fp = BytesIO()
     tts.write_to_fp(fp)
