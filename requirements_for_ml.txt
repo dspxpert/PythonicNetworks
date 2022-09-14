@@ -1,7 +1,7 @@
 virtualenv
 virtualenvwrapper-win
 beautifulsoup4
-pyserial-asycio
+pyserial-asyncio
 loguru
 numpy
 scipy
