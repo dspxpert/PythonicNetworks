@@ -1,9 +1,15 @@
-tensorflow_cpu
+virtualenv
+virtualenvwrapper-win
+beautifulsoup4
+pyserial-asycio
+loguru
+numpy
 scipy
 scikit-learn
 scikit-image
 pandas
 jupyter
+tensorflow_cpu
 torch
 torchvision
 torchaudio
