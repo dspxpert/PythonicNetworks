@@ -1,7 +1,6 @@
 mediapipe
 gTTS
 pydub
-textblob
 langdetect
 pyzbar
 qrcode
