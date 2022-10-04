@@ -5,3 +5,5 @@
 
    https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
 
+
+https://github.com/Uberi/speech_recognition
