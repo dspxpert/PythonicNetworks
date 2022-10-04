@@ -1,5 +1,6 @@
 mediapipe
 gTTS
+SpeechRecognition
 pydub
 langdetect
 pyzbar
