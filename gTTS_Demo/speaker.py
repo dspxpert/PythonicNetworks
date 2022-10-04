@@ -44,7 +44,7 @@ def speak(text):
     if text=='':
         return
     
-    print(f'[A I] {text}')
+    print(f'[AI ] {text}')
     lang = detect(text)
     tts = gTTS(text, lang=lang)
     fp = BytesIO()
